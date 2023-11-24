@@ -11,8 +11,8 @@ function ProductCard({
 	image,
 }: ProductCardProps) {
 	return (
-		<Link to={'/'} className={styles['link']}>
-			<div className={styles['card']} id={id}>
+		<Link to={`/product/${id}`} className={styles['link']}>
+			<div className={styles['card']}>
 				<div
 					className={styles['head']}
 					style={{ backgroundImage: `url('${image}')` }}

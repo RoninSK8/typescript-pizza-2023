@@ -12,7 +12,7 @@ function Menu() {
 			</div>
 			<div>
 				<ProductCard
-					id="123"
+					id={1}
 					price={100}
 					rating={4.4}
 					title="pizza"
