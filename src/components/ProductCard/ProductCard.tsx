@@ -6,7 +6,7 @@ function ProductCard({
 	id,
 	price,
 	rating,
-	title,
+	name,
 	description,
 	image,
 }: ProductCardProps) {
@@ -34,7 +34,7 @@ function ProductCard({
 					</button>
 				</div>
 				<div className={styles['footer']}>
-					<div className={styles['title']}>{title}</div>
+					<div className={styles['title']}>{name}</div>
 					<div className={styles['description']}>{description}</div>
 				</div>
 			</div>
