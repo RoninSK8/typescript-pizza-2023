@@ -8,6 +8,9 @@ import Layout from './Layout/Menu/Layout.tsx';
 import Product from './Pages/Product/Product.tsx';
 import axios from 'axios';
 import { PREFIX } from './helpers/API.ts';
+import AuthLayout from './Layout/Auth/AuthLayout.tsx';
+import Login from './Pages/Login/Login.tsx';
+import Register from './Pages/Register/Register.tsx';
 
 const Menu = lazy(() => import('./Pages/Menu/Menu.tsx'));
 
@@ -45,6 +48,20 @@ const router = createBrowserRouter([
 	{
 		path: '*',
 		element: <Error />,
+	},
+	{
+		path: '/auth',
+		element: <AuthLayout />,
+		children: [
+			{
+				path: 'login',
+				element: <Login />,
+			},
+			{
+				path: 'register',
+				element: <Register />,
+			},
+		],
 	},
 ]);
 
