@@ -10,6 +10,8 @@ import { useEffect } from 'react';
 function Layout() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch<AppDispatch>();
+	const profile = useSelector((s: RootState) => s.user.profile);
+	// const items = useSelector((s: RootState) => s.cart.items);
 
 	useEffect(() => {
 		dispatch(getUserProfile());
@@ -19,8 +21,6 @@ function Layout() {
 		dispatch(userActions.logout());
 		navigate('/auth/login');
 	};
-
-	const profile = useSelector((s: RootState) => s.user.profile);
 
 	return (
 		<div className={styles['layout']}>
