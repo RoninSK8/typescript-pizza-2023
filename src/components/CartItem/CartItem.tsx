@@ -35,15 +35,15 @@ function CartItem({ id, name, image, price, count }: cartItemProps) {
 				</div>
 			</div>
 			<div className={styles['actions']}>
-				<button className={styles['button']} onClick={decrease}>
-					<img src="/cart-button-icon.svg" alt="Уменьшить количество" />
+				<button className={styles['minus']} onClick={decrease}>
+					<img src="/minus-icon.svg" alt="Уменьшить количество" />
 				</button>
-				<div>{count}</div>
-				<button className={styles['button']} onClick={increase}>
-					<img src="/cart-button-icon.svg" alt="Увеличить количество" />
+				<div className={styles['number']}>{count}</div>
+				<button className={styles['plus']} onClick={increase}>
+					<img src="/plus-icon.svg" alt="Увеличить количество" />
 				</button>
 				<button className={styles['remove']} onClick={remove}>
-					<img src="/cart-button-icon.svg" alt="Удалить" />
+					<img src="/delete-icon.svg" alt="Удалить" />
 				</button>
 			</div>
 		</div>
