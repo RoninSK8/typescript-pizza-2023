@@ -34,7 +34,7 @@ function Cart() {
 				if (!product) {
 					return;
 				}
-				return <CartItem count={i.count} {...product} />;
+				return <CartItem key={product.id} count={i.count} {...product} />;
 			})}
 		</>
 	);

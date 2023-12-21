@@ -3,22 +3,18 @@ import { cartItemProps } from './CartItem.props';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store/store';
 import { cartActions } from '../../store/cart.slice';
-import { MouseEvent } from 'react';
 
 function CartItem({ id, name, image, price, count }: cartItemProps) {
 	const dispatch = useDispatch<AppDispatch>();
 
-	const increase = (e: MouseEvent) => {
-		e.preventDefault();
+	const increase = () => {
 		dispatch(cartActions.add(id));
 	};
-	const decrease = (e: MouseEvent) => {
-		e.preventDefault();
-		dispatch(cartActions.add(id));
+	const decrease = () => {
+		dispatch(cartActions.remove(id));
 	};
-	const remove = (e: MouseEvent) => {
-		e.preventDefault();
-		dispatch(cartActions.add(id));
+	const remove = () => {
+		dispatch(cartActions.delete(id));
 	};
 
 	return (
