@@ -14,6 +14,7 @@ import Register from './Pages/Register/Register.tsx';
 import { RequireAuth } from './helpers/RequireAuth.tsx';
 import { Provider } from 'react-redux';
 import { store } from './store/store.ts';
+import Success from './Pages/Success/Success.tsx';
 
 const Menu = lazy(() => import('./Pages/Menu/Menu.tsx'));
 
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
 			{
 				path: '/cart',
 				element: <Cart />,
+			},
+			{
+				path: '/success',
+				element: <Success />,
 			},
 			{
 				path: '/product/:id',
